@@ -6,7 +6,7 @@
     <title>User</title>
 </head>
 <body>
-    <h1 sttyle="color:green">I am user</h1>
+    <h1 style="color:green;">I am user</h1>
     
 </body>
 </html>

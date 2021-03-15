@@ -20,3 +20,10 @@ Route::get('/', function () {
 Route::get('/portfolio', function () {
     return view('Portfolio');
 });
+
+Route::get('user', function(){
+    return view('user');
+});
+Route::get('home', function(){
+    return 'home';
+});
