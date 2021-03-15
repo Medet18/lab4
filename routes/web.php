@@ -70,6 +70,12 @@ Route::get('post/create',function(){
 });
 
 Route::get('/post', [BlogController::class, 'index']);
+
+Route::get('post/create1', function(){
+    return view('blog.create');
+});
+//action route
+Route::post('post/create1', [BlogController::class, 'store'])->name('add-post');
 // Route::get('/post',function(){
 //     $p = Post::find(1);
 //     return $p;//->title;
