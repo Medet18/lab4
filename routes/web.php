@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+//1
+use Illuminate\Support\Facades\DB;
+//2
+use App\Models\Client;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,4 +31,19 @@ Route::get('user', function(){
 });
 Route::get('home', function(){
     return 'home';
+});
+/////lab4
+//// php artisan make:migration create_clients_table
+////php artisan make:model Client
+Route::get('client/add',function(){
+    DB::table('clients')->insert([
+        'name'=>'Medet',
+        'lastname'=>'Kurganbayev',
+        'age'=>19 
+    ]);
+});
+
+Route::get('client',function(){
+    $client = Client::find(1);
+    return $client;//->name;
 });
