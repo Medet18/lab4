@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Client;
 //3
 use App\Models\Post;
+//4
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +39,7 @@ Route::get('home', function(){
 /////lab4_1
 //// php artisan make:migration create_clients_table
 ////php artisan make:model Client
+//changwd route;
 Route::get('client/add',function(){
     DB::table('clients')->insert([
         'name'=>'Medet',
@@ -45,10 +48,7 @@ Route::get('client/add',function(){
     ]);
 });
 
-Route::get('client',function(){
-    $client = Client::find(1);
-    return $client;//->name;
-});
+Route::get('client', [ClientController::class,'index']);
 ///////lab4_2
 ////////////php artisan make:migration create_post_table
 ///php artisan make:model Post
@@ -62,3 +62,5 @@ Route::get('/post',function(){
     $p = Post::find(1);
     return $p;//->title;
 });
+////lab5////////////////
+//php artisan make:controller ClientController
