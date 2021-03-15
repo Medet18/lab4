@@ -10,6 +10,8 @@ use App\Models\Client;
 use App\Models\Post;
 //4
 use App\Http\Controllers\ClientController;
+//5
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,15 +61,19 @@ Route::post('client/create', [ClientController::class, 'store'])->name('add-clie
 ///////lab4_2
 ////////////php artisan make:migration create_post_table
 ///php artisan make:model Post
+
 Route::get('post/create',function(){
     DB::table('post')->insert([
         'title'=>'Cars',
         'body'=>'Super car'
     ]);
 });
-Route::get('/post',function(){
-    $p = Post::find(1);
-    return $p;//->title;
-});
+
+Route::get('/post', [BlogController::class, 'index']);
+// Route::get('/post',function(){
+//     $p = Post::find(1);
+//     return $p;//->title;
+// });
+
 ////lab5////////////////
 //php artisan make:controller ClientController
