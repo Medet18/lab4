@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 //2
 use App\Models\Client;
+//3
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +34,7 @@ Route::get('user', function(){
 Route::get('home', function(){
     return 'home';
 });
-/////lab4
+/////lab4_1
 //// php artisan make:migration create_clients_table
 ////php artisan make:model Client
 Route::get('client/add',function(){
@@ -46,4 +48,17 @@ Route::get('client/add',function(){
 Route::get('client',function(){
     $client = Client::find(1);
     return $client;//->name;
+});
+///////lab4_2
+////////////php artisan make:migration create_post_table
+///php artisan make:model Post
+Route::get('post/create',function(){
+    DB::table('post')->insert([
+        'title'=>'Cars',
+        'body'=>'Super car'
+    ]);
+});
+Route::get('/post',function(){
+    $p = Post::find(1);
+    return $p;//->title;
 });
