@@ -13,4 +13,15 @@ class ClientController extends Controller
 
         return view('client.index')->with(['clients' => $clients]);
     }
+
+    //2
+    public function store(Request $request){
+        // dd($request->name);
+        Client::create([
+            'name' => $request->name,
+            'lastname' => $request->lastname,
+            'age' => $request->age
+        ]);
+        return back();
+    }
 }
