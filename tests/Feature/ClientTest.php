@@ -32,7 +32,7 @@ class ClientTest extends TestCase
     //3
     public function test_client_response(){
         $response = $this->get('/client/1');
-        $response = assertViewHas('client');
+        $response -> assertViewHas('client');
     }
 
 }
