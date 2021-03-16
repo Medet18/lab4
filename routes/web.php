@@ -87,4 +87,6 @@ Route::post('post/create1', [BlogController::class, 'store'])->name('add-post');
 
 /////////lab 6
 ////php arisan make:test ClientTest;
-Route::get('client/{id}',[ClientController::class, 'get_client']);
+//Route::get('client/{id}',[ClientController::class, 'get_client']);
+///lab6 fo Post
+///php artisan make:test PostTest//
