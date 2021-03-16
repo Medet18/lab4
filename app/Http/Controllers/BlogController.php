@@ -22,4 +22,14 @@ class BlogController extends Controller
 
        return back();
     }
+    //lab6
+    public function get_post($id){
+        $post = Post::find($id);
+
+        if($post == null)
+            return response(['message'=> 'client not found'], 404);
+
+    
+            return view('blog.detail')->with(['post'=>$post]);   
+    }
 }

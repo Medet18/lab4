@@ -90,3 +90,4 @@ Route::post('post/create1', [BlogController::class, 'store'])->name('add-post');
 //Route::get('client/{id}',[ClientController::class, 'get_client']);
 ///lab6 fo Post
 ///php artisan make:test PostTest//
+Route::get('post/{id}',[BlogController::class, 'get_post']);
