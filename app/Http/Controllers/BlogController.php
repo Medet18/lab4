@@ -13,6 +13,7 @@ class BlogController extends Controller
 
         return view('blog.index')->with(['post' => $post]);
     }
+    //2
     public function store(Request $request){
        // dd($request);
        Post::create([
@@ -22,7 +23,7 @@ class BlogController extends Controller
 
        return back();
     }
-    //lab6
+    //lab6 was changing
     public function get_post($id){
         $post = Post::find($id);
 

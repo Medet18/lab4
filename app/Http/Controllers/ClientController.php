@@ -24,7 +24,7 @@ class ClientController extends Controller
         ]);
         return back();
     }
-    //3 lab6
+    //3 lab6 was changing$$$$$$$$$
     // public function get_client($id){
     //     $client = Client::find($id);
 

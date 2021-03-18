@@ -35,3 +35,4 @@ class PostTest extends TestCase
         $response -> assertViewHas('post');
     }
 }
+///was changing
