@@ -13,6 +13,10 @@ use App\Http\Controllers\ClientController;
 //5
 use App\Http\Controllers\BlogController;
 
+use App\Http\Controllers\HumanController;
+use App\Models\Human;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -96,3 +100,7 @@ Route::get('post/{id}',[BlogController::class, 'get_post']);
 
 //lab7
 //api    php artisan make:controller ApiPostController
+
+///lab8
+Route::get('/human0',[HumanController::class, 'index']);
+Route::get('/human','App\Http\Controllers\HumanController@index');
