@@ -15,6 +15,11 @@ use App\Http\Controllers\BlogController;
 
 // use App\Http\Controllers\EmployeeController;
 // use App\Models\Employee;
+//lab8
+use App\Http\Controllers\StudentController;
+
+
+
 
 
 /*
@@ -106,3 +111,9 @@ Route::get('post/{id}',[BlogController::class, 'get_post']);
 //Route::get('/human','App\Http\Controllers\HumanController@index');
 
 //Route::post('/addimage',[EmployeeController::class, 'store'])->name('addimage');
+/////////////////////
+
+Route::get('/add-student',[StudentController::class,'addStudent']);
+Route::post('/add-student',[StudentController::class,'storeStudent'])->name('student-store');
+
+Route::get('/all-student',[StudentController::class,'students']);
