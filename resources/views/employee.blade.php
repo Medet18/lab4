@@ -10,32 +10,36 @@
 </head>
 <body>
     <div class="container">
-        <form action="" method="POST" enctype="multipart/form-data">
-
+        <div class="jumbotron">
+            <form action="{{ route('addimage') }}" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" class="form-control" placeholder="Enter name">
+                <input type="text" name="name" class="form-control" placeholder="Enter name">
             </div>
-            
+
             <div class="form-group">
                 <label>LastName</label>
-                <input type="text" class="form-control" placeholder="Enter lastname">
+                <input type="text" name="lastname" class="form-control" placeholder="Enter lastname">
             </div>
-            
+
             <div class="form-group">
                 <label>Email</label>
-                <input type="text" class="form-control" placeholder="Enter email">
+                <input type="text" name="email" class="form-control" placeholder="Enter email">
             </div>
 
             <div class="input-group">
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input">
+                    <input type="file" name="image" class="custom-file-input">
                     <label class="custom-file-label">Choose file</label>
                 </div>
             </div>
+            <br>
 
             <button type="submit" name="submit" class="btn btn-primary">Save Data</button>
-        </form>
+            </form>
+   
+        </div>
     </div>
 </body>
 </html>

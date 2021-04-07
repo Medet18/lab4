@@ -13,8 +13,8 @@ use App\Http\Controllers\ClientController;
 //5
 use App\Http\Controllers\BlogController;
 
-use App\Http\Controllers\HumanController;
-use App\Models\Human;
+// use App\Http\Controllers\EmployeeController;
+// use App\Models\Employee;
 
 
 /*
@@ -102,5 +102,7 @@ Route::get('post/{id}',[BlogController::class, 'get_post']);
 //api    php artisan make:controller ApiPostController
 
 ///lab8
-Route::get('/human0',[HumanController::class, 'index']);
-Route::get('/human','App\Http\Controllers\HumanController@index');
+//Route::get('/employee',[EmployeeController::class, 'index']);
+//Route::get('/human','App\Http\Controllers\HumanController@index');
+
+//Route::post('/addimage',[EmployeeController::class, 'store'])->name('addimage');
