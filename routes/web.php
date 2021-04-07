@@ -17,6 +17,9 @@ use App\Http\Controllers\BlogController;
 // use App\Models\Employee;
 //lab8
 use App\Http\Controllers\StudentController;
+//email
+use App\Http\Controllers\MailController;
+
 
 
 
@@ -115,6 +118,7 @@ Route::get('post/{id}',[BlogController::class, 'get_post']);
 
 Route::get('/add-student',[StudentController::class,'addStudent']);
 Route::post('/add-student',[StudentController::class,'storeStudent'])->name('student-store');
-
 Route::get('/all-student',[StudentController::class,'students']);
 //send email
+Route::get('/send-email',[MailController::class,'sendEmail']);
+
