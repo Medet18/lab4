@@ -46,7 +46,7 @@
                                     <img src="previewImg" alt="profi" style="max-width:130px;margin-top:20px;">
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" >Submit</button>
                             </form>
                         </div>
                     </div>

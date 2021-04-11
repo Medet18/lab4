@@ -122,3 +122,6 @@ Route::get('/all-student',[StudentController::class,'students']);
 //send email
 Route::get('/send-email',[MailController::class,'sendEmail']);
 
+////lab9
+Route::get('/portfolio/{locale}',[PortfolioLocalController::class,'localization']);
+
