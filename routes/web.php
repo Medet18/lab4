@@ -19,6 +19,9 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\StudentController;
 //email
 use App\Http\Controllers\MailController;
+//lab9
+use App\Http\Controllers\PortfolioLocalController;
+
 
 
 
@@ -123,5 +126,5 @@ Route::get('/all-student',[StudentController::class,'students']);
 Route::get('/send-email',[MailController::class,'sendEmail']);
 
 ////lab9
-Route::get('/portfolio/{locale}',[PortfolioLocalController::class,'localization']);
+Route::get('/portfolioLocale/{locale}',[PortfolioLocalController::class,'localization']);
 
